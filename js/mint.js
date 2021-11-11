@@ -34,7 +34,7 @@ async function submit_mint() {
   let mintAmount = parseInt(document.querySelector('input[name="mint_amount"]:checked').value);
 
   if(mintAmount <= 2){
-    const contract = web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
+    const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
 
     const options = {
       contractAddress: CONTRACT_ADDRESS,
