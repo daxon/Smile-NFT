@@ -39,7 +39,7 @@ async function submit_mint() {
     const options = {
       contractAddress: CONTRACT_ADDRESS,
       functionName: "paused",
-      abi: ABI,
+      abi: CONTRACT_ABI,
     };
     const isPaused = await Moralis.executeFunction(options);
 
