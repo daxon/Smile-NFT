@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="float-lg-none">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Starter Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/mmporalis/dist/moralis.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <a class="navbar-brand" href="#">Smiles NFT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Mint</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Roadmap</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="starter-template">
+                <h1>Mint the Smiles</h1>
+                <div>
+                    <div id="message">
+
+                    </div>
+                    <div class="btn-group" data-toggle="buttons"> 
+                        <form name="send-form" class="mint-form" >
+                        <label class="btn btn-secondary active"> 
+                            <input id="option1" type="radio" value="1" name="mint_amount" autocomplete="off" checked="checked"/> 1        
+                        </label>                         
+
+                        <label class="btn btn-secondary"> 
+                            <input id="option2" type="radio" value="2" name="mint_amount" autocomplete="off"/>2        
+                        </label>                         
+                    </div>
+                    <button class="btn btn-light" type="button" id="submit_mint">Mint</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="js/mint.js"></script>
+    </body>
+</html>
