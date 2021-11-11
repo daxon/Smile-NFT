@@ -4,8 +4,6 @@ const CONTRACT_ADDRESS = "0x8B672977595D0E9bfc3b82C45B3629E2489CD756"
 Moralis.start({ serverUrl, appId });
 let web3;
 
-
-
 /* Status Messages */
 function showMessage(msg, success) {
   if (success) {
@@ -13,7 +11,7 @@ function showMessage(msg, success) {
   } else {
   jQuery('#message').html('<span class="failure">'+msg+'</span>');
   }
-  }
+}
 
 /* Authentication code */
 async function submit_mint() {
@@ -56,8 +54,6 @@ async function submit_mint() {
     console.log("you can only mint 2");
   } 
    
-}
-
 }
 
 const getContract = async (web3) => {
