@@ -30,7 +30,7 @@ async function submit_mint() {
   showMessage("logging in user", true);
   web3 = await Moralis.Web3.enableWeb3();
   
-  let accounts = web3.eth.getAccounts();
+  let accounts = await web3.eth.getAccounts();
   let mintAmount = parseInt(document.querySelector('input[name="mint_amount"]:checked').value);
 
   if(mintAmount <= 2){
@@ -45,7 +45,7 @@ async function submit_mint() {
 
     if(!isPaused){
       showMessage("beginning mint process", true);
-      contract.methods.mint(mintAmount).send( {from: accounts[0], value: (mintAmount*1000000000000)}).on("receipt", function(receipt){
+      contract.methods.mint(mintAmount).send({from: accounts[0], value: (mintAmount*100000000000000000)}).on("receipt", function(receipt){
         showMessage("mint is complete", true);
       });
 

@@ -1,6 +1,27 @@
 {
     "description": "The most smilie NFT collection in the world. 400 unique happy smiles living on the Ethereum blockchain. With this incredible community, our mission is to uplift animal welfare and make the world a brighter place. Your Smiles doubles as a membership card to access members-only benefits, NFT claims, future airdrops and events. Photography by wowzer. Visit www.example.com for more details. ", 
     "external_url": "https://www.smile.com/original", 
-    "image": "https://smile-nft-p3rbr.ondigitalocean.app/image/0.jpg", 
-    "name": "Smile Originals Hidden"
+    "image": "https://smile-nft-p3rbr.ondigitalocean.app/image/3.jpg", 
+    "name": "Smile Originals #3",
+    "attributes": [
+      {
+        "trait_type": "Edition", 
+        "value": "First"
+      }, 
+      {
+        "trait_type": "Type", 
+        "value": "Adult"
+      }, 
+      {
+        "trait_type": "Home", 
+        "value": "Nature"
+      }, 
+      {
+        "trait_type": "Mouth", 
+        "value": "Smirk"
+      }, 
+      {
+        "trait_type": "Food", 
+        "value": "Leaf"
+      }]
   }
