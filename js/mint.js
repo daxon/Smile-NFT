@@ -37,13 +37,26 @@ async function submit_mint() {
 
   if(mintAmount <= 2){
     const contract = web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
-    showMessage("beginning mint process", true);
-    contract.methods.mint(mintAmount).send( {from: accounts[0], value: (mintAmount*1000000000000)}).on("receipt", function(receipt){
-      showMessage("mint is complete", true);
-    });
+
+    const options = {
+      contractAddress: CONTRACT_ADDRESS,
+      functionName: "paused",
+      abi: ABI,
+    };
+    const isPaused = await Moralis.executeFunction(options);
+
+    if(!isPaused){
+      showMessage("beginning mint process", true);
+      contract.methods.mint(mintAmount).send( {from: accounts[0], value: (mintAmount*1000000000000)}).on("receipt", function(receipt){
+        showMessage("mint is complete", true);
+      });
+
+    }
   }else{
     console.log("you can only mint 2");
-  }
+  } 
+   
+}
 
 }
 
