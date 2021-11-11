@@ -1,6 +1,6 @@
 const serverUrl = "https://d2qwhavjxjpf.usemoralis.com:2053/server";
 const appId = "MojOxWSqgTiDG5k83CZH1VP8jwXrSzlRbh1PpGcX";
-const CONTRACT_ADDRESS = "TESTTEST"
+const CONTRACT_ADDRESS = "0x8B672977595D0E9bfc3b82C45B3629E2489CD756"
 Moralis.start({ serverUrl, appId });
 let web3;
 
@@ -33,15 +33,14 @@ async function submit_mint() {
   web3 = await Moralis.Web3.enable();
   
   let accounts = web3.eth.getAccounts();
-  console.log(accounts);
-
   let mintAmount = parseInt(document.querySelector('input[name="mint_amount"]:checked').value);
 
   if(mintAmount <= 2){
-    const contract = web3.eth.contract('CONTRACT ABI', CONTRACT_ADDRESS);
+    const contract = web3.eth.contract(CONTRACT_ABI, CONTRACT_ADDRESS);
     showMessage("beginning mint process", true);
-    contract.methods.mint(mintAmount).send( {from: accounts[0], value: (mintAmount*80000000000000000)});
-    showMessage("processing mint", true);
+    contract.methods.mint(mintAmount).send( {from: accounts[0], value: (mintAmount*1000000000000)}).on("receipt", function(receipt){
+      showMessage("mint is complete", true);
+    });
   }else{
     console.log("you can only mint 2");
   }
